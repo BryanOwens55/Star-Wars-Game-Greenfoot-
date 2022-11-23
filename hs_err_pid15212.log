@@ -1,0 +1,196 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for Failed to commit area from 0x0000000704600000 to 0x0000000714200000 of length 264241152.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3387), pid=15212, tid=17604
+#
+# JRE version:  (11.0.14.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.14.1+1, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:MaxGCPauseMillis=50 -agentlib:jdwp=transport=dt_shmem,address=javadebug -Dfile.encoding=UTF-8 bluej.runtime.ExecServer UTF-8
+
+Host: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz, 16 cores, 15G,  Windows 11 , 64 bit Build 22000 (10.0.22000.1219)
+Time: Tue Nov 22 21:45:46 2022 Eastern Standard Time elapsed time: 0.010224 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002d32524f800):  JavaThread "Unknown thread" [_thread_in_vm, id=17604, stack(0x000000dfcf600000,0x000000dfcf700000)]
+
+Stack: [0x000000dfcf600000,0x000000dfcf700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61e59a]
+V  [jvm.dll+0x7aaca9]
+V  [jvm.dll+0x7ac398]
+V  [jvm.dll+0x7aca73]
+V  [jvm.dll+0x24f9b8]
+V  [jvm.dll+0x61b83a]
+V  [jvm.dll+0x6100c5]
+V  [jvm.dll+0x30772c]
+V  [jvm.dll+0x3075b2]
+V  [jvm.dll+0x30c2d6]
+V  [jvm.dll+0x35272f]
+V  [jvm.dll+0x352160]
+V  [jvm.dll+0x2e4728]
+V  [jvm.dll+0x2e5886]
+V  [jvm.dll+0x784b07]
+V  [jvm.dll+0x78628f]
+V  [jvm.dll+0x35f479]
+V  [jvm.dll+0x767aa0]
+V  [jvm.dll+0x3ccf1f]
+V  [jvm.dll+0x3cf2b1]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x26c0c]
+C  [KERNEL32.DLL+0x15550]
+C  [ntdll.dll+0x485b]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000002d323046a90, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002d32526a000 GCTaskThread "GC Thread#0" [stack: 0x000000dfcf700000,0x000000dfcf800000] [id=27564]
+  0x000002d3252c5800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000dfcf800000,0x000000dfcf900000] [id=11340]
+  0x000002d3252c8800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000dfcf900000,0x000000dfcfa00000] [id=18816]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdb1653ef7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002d32524bbc0] Heap_lock - owner thread: 0x000002d32524f800
+
+Heap address: 0x0000000704600000, size: 4026 MB, Compressed Oops mode: Non-zero based: 0x0000000704600000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Program Files\Greenfoot\jdk\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff71c1c0000 - 0x00007ff71c1cd000 	C:\Program Files\Greenfoot\jdk\bin\java.exe
+0x00007ffe239a0000 - 0x00007ffe23ba9000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe227a0000 - 0x00007ffe2285e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe21310000 - 0x00007ffe2168b000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe1b1d0000 - 0x00007ffe1b262000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ffe20e70000 - 0x00007ffe20f81000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe13750000 - 0x00007ffe13765000 	C:\Program Files\Greenfoot\jdk\bin\VCRUNTIME140.dll
+0x00007ffe13b30000 - 0x00007ffe13b47000 	C:\Program Files\Greenfoot\jdk\bin\jli.dll
+0x00007ffe23080000 - 0x00007ffe2322d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe212e0000 - 0x00007ffe21306000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe21b70000 - 0x00007ffe21b99000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe05870000 - 0x00007ffe05b15000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ffe21700000 - 0x00007ffe21818000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe238b0000 - 0x00007ffe23953000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe21180000 - 0x00007ffe2121d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe22430000 - 0x00007ffe22462000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffdf65e0000 - 0x00007ffdf667b000 	C:\Program Files\Greenfoot\jdk\bin\msvcp140.dll
+0x00007ffdb1360000 - 0x00007ffdb1ee1000 	C:\Program Files\Greenfoot\jdk\bin\server\jvm.dll
+0x00007ffe21ba0000 - 0x00007ffe21c4e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe22390000 - 0x00007ffe2242e000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe21e00000 - 0x00007ffe21f20000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe222a0000 - 0x00007ffe222a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe1e540000 - 0x00007ffe1e573000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe17b70000 - 0x00007ffe17b7a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe1e450000 - 0x00007ffe1e459000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe23840000 - 0x00007ffe238af000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe1ffe0000 - 0x00007ffe1fff8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe1c670000 - 0x00007ffe1c680000 	C:\Program Files\Greenfoot\jdk\bin\verify.dll
+0x00007ffe1e890000 - 0x00007ffe1eab1000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe1e4d0000 - 0x00007ffe1e501000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe20f90000 - 0x00007ffe2100f000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe04c70000 - 0x00007ffe04c98000 	C:\Program Files\Greenfoot\jdk\bin\java.dll
+0x00007ffe1c620000 - 0x00007ffe1c62a000 	C:\Program Files\Greenfoot\jdk\bin\jimage.dll
+0x00007ffe00780000 - 0x00007ffe007b8000 	C:\Program Files\Greenfoot\jdk\bin\jdwp.dll
+0x00007ffe12db0000 - 0x00007ffe12dc8000 	C:\Program Files\Greenfoot\jdk\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Greenfoot\jdk\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467;C:\Program Files\Greenfoot\jdk\bin\server
+
+VM Arguments:
+jvm_args: -XX:MaxGCPauseMillis=50 -agentlib:jdwp=transport=dt_shmem,address=javadebug -Dfile.encoding=UTF-8 
+java_command: bluej.runtime.ExecServer UTF-8
+java_class_path (initial): C:\Program Files\Greenfoot\lib\greenfoot.jar;C:\Program Files\Greenfoot\lib\bluejcore.jar;C:\Program Files\Greenfoot\lib\bluejeditor.jar;C:\Program Files\Greenfoot\lib\bluejext2.jar;C:\Program Files\Greenfoot\lib\junit-jupiter-5.5.2.jar;C:\Program Files\Greenfoot\lib\junit-jupiter-api-5.5.2.jar;C:\Program Files\Greenfoot\lib\junit-jupiter-engine-5.5.2.jar;C:\Program Files\Greenfoot\lib\junit-jupiter-migrationsupport-5.5.2.jar;C:\Program Files\Greenfoot\lib\junit-jupiter-params-5.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-commons-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-console-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-console-standalone-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-engine-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-launcher-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-reporting-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-runner-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-suite-api-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-platform-testkit-1.5.2.jar;C:\Program Files\Greenfoot\lib\junit-quickcheck-core-0.9.jar;C:\Program Files\Greenfoot\lib\junit-vintage-engine-5.5.2.jar;C:\Program Files\Greenfoot\lib\hamcrest-core-1.3.jar;C:\Program Files\Greenfoot\lib\bluej.jar;C:\Program Files\Greenfoot\lib\classgraph-4.8.90.jar;C:\Program Files\Greenfoot\lib\diffutils-1.2.1.jar;C:\Program Files\Greenfoot\lib\commons-logging-api-1.1.2.jar;C:\Program Files\Greenfoot\lib\jl1.0.1.jar;C:\Program Files\Greenfoot\lib\opencsv-2.3.jar;C:\Program Files\Greenfoot\lib\xom-1.3.7.jar;C:\Program Files\Greenfoot\lib\lang-stride.jar;C:\Program Files\Greenfoot\lib\nsmenufx-2.1.8.jar;C:\Program Files\Greenfoot\lib\wellbehavedfx-0.3.3.jar;C:\Program Files\Greenfoot\lib\guava-17.0.jar;C:\Program Files\Greenfoot\lib\httpclient-4.1.1.jar;C:\Program Files\Greenfoot\lib\httpcore-4.1.jar;C:\Program Files\Greenfoot\lib\httpmime-4.1.1.jar;C:\Program Files\Greenfo
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+    uintx MaxGCPauseMillis                         = 50                                        {product} {command line}
+   size_t MaxHeapSize                              = 4221566976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7594288                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122031976                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122031976                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Oculus\Support\oculus-runtime;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\bryan\AppData\Local\Microsoft\WindowsApps;;C:\Users\bryan\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=bryan
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22000 (10.0.22000.1219)
+OS uptime: 6 days 12:29 hours
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 141 stepping 1 microcode 0x3e, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, evex, sha, fma
+
+Memory: 4k page, system-wide physical 16103M (2549M free)
+TotalPageFile size 16103M (AvailPageFile size 151M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 71M, peak: 323M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.14.1+1) for windows-amd64 JRE (11.0.14.1+1), built on Feb  9 2022 01:48:27 by "" with unknown MS VC++:1916
+
+END.
