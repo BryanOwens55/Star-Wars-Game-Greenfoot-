@@ -1,12 +1,5 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+PROJECT TITLE: Star Wars Side Scroller (Hard)
+PURPOSE OF PROJECT: School project using java
+VERSION or DATE:  December 3rd, 2018
+HOW TO START THIS PROJECT: Open Project Using Greenfoot, or run executable (coming soon)
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
